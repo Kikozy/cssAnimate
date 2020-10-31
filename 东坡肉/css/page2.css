@@ -1,0 +1,57 @@
+.page2 {
+    background: url("../img/page2/bg.png") no-repeat;
+    background-size: 100% 100%;
+}
+/* 页面中的图片 */
+.page2-img {
+    position: absolute;
+
+}
+/* logo */
+.page2-img-logo {
+    top: 2%;
+    left: 47%;
+    height: 60px;
+    width: 60px;
+}
+/* 东坡肉图片 */
+.page2-img-dpr {
+    top: 40%;
+    left: 46%;
+    height: 185px;
+    width: 260px;
+    z-index: 89;
+}
+/* 酒图片 */
+.page2-img-jiu {
+    top: 30%;
+    left: 46%;
+    height: 90px;
+    width: 90px;
+    transform-origin: 217.5px 245.1px;
+    animation: zd 5s linear infinite;
+    /* 
+        x:187.5 y:333.5
+        当前: x:217.5 y:245.1
+    */
+}
+/* 姜图片 */
+.page2-img-cong {
+    top: 59%;
+    left: 13%;
+    height: 90px;
+    width: 90px;
+}
+
+/* 冰糖图片 */
+.page2-img-bt {
+    top: 74%;
+    left: 58%;
+    height: 90px;
+    width: 90px;
+}
+@keyframes zd{
+    to {
+        transform: rotate(1turn);
+    }
+}

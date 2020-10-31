@@ -1,0 +1,26 @@
+/* 基本设置 */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* 视窗 */
+.view-box{
+    width: 375px;
+    height: 667px;
+    overflow: hidden;
+}
+/* 触摸区域 */
+.touch-area {
+    width: 100%;
+    transition: 0.5s;
+}
+.page {
+    position: relative;
+    width: 375px;
+    height: 667px;
+}
+@font-face{
+    font-family: "myFont";
+    src: url("../font/《一碗东坡肉》字体.otf");
+}

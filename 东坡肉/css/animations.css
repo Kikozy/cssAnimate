@@ -1,0 +1,25 @@
+@keyframes qi-ani{
+    0% {
+        opacity: 0;
+        transform: translate(0,0) scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(0,-30px) scale(0.9);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(0,-50px) scale(0.7);
+    }
+}
+@keyframes dian{
+    0%{
+        content: ".";
+    }
+    50% {
+        content: "..";
+    }
+    100% {
+        content: "...";
+    }
+}
