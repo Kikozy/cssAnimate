@@ -1,57 +1,115 @@
 .page2 {
+    position: relative;
     background: url("../img/page2/bg.png") no-repeat;
-    background-size: 100% 100%;
-}
-/* 页面中的图片 */
-.page2-img {
-    position: absolute;
-
+    overflow: hidden;
 }
 /* logo */
 .page2-img-logo {
-    top: 2%;
-    left: 47%;
+    position: absolute;
+    top: 6%;
+    left: 48.5%;
     height: 60px;
     width: 60px;
 }
+/* logo的文字 */
+.page2-logo-text {
+    position: absolute;
+    top: 15%;
+    left: 48%;
+    color: #782110;
+    font: 12px "myFont";
+}
 /* 东坡肉图片 */
 .page2-img-dpr {
+    position: absolute;
     top: 40%;
     left: 46%;
     height: 185px;
     width: 260px;
     z-index: 89;
 }
-/* 酒图片 */
-.page2-img-jiu {
-    top: 30%;
-    left: 46%;
+/* 旋转盒子 */
+.page2-rotate-box {
+    position: absolute;
+    height: 750px;
+    width: 750px;
+    background: url("../img/page2/quan.png") no-repeat;
+    background-size: 100% 100%;
+    animation: zd 10s linear infinite;
+    z-index: 88;
+}
+/* 页面中的图片 */
+.rotate-img{
+    position: absolute;
     height: 90px;
     width: 90px;
-    transform-origin: 217.5px 245.1px;
     animation: zd 5s linear infinite;
-    /* 
-        x:187.5 y:333.5
-        当前: x:217.5 y:245.1
-    */
 }
 /* 姜图片 */
 .page2-img-cong {
-    top: 59%;
-    left: 13%;
-    height: 90px;
-    width: 90px;
+    top: 393.53px;
+    left: 48.75px;
 }
 
 /* 冰糖图片 */
 .page2-img-bt {
-    top: 74%;
-    left: 58%;
-    height: 90px;
-    width: 90px;
+    top: 65%;
+    left: 26%;
+}
+/* 酒图片 */
+.page2-img-jiu {
+    top: 200.1px;
+    left: 172.5px;
+}
+/* 猪肉图片 */
+.page2-img-rou{
+    top: 24%;
+    right: 26%;
+}
+/* 五香图片 */
+.page2-img-wx {
+    top: 50%;
+    right: 17%;
 }
 @keyframes zd{
     to {
         transform: rotate(1turn);
     }
+}
+/* 文字 */
+.page2-text {
+    position: absolute;
+    top: 16%;
+    left: 7%;
+    height: 30px;
+    color: #782110;
+    font: 20px/30px "myFont";
+}
+.page2-text::after {
+    position: absolute;
+    content: "我是专业的";
+    height: 30px;
+    width: 120px;
+    top: 85%;
+    left: 13%;
+    color: #782110;
+    font: 20px/30px "myFont";
+}
+
+/* 下一页箭头 */
+.next-img {
+    position: absolute;
+    left: 49%;
+    bottom: 4%;
+    height: 20px;
+    width: 30px;
+}
+
+/* 下一页文字 */
+.next-text {
+    position: absolute;
+    left: 45%;
+    bottom: 7%;
+    color: #782110;
+    font: 14px "myFont";
 }
