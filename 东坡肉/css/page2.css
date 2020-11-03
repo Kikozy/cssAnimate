@@ -3,22 +3,6 @@
     background: url("../img/page2/bg.png") no-repeat;
     overflow: hidden;
 }
-/* logo */
-.page2-img-logo {
-    position: absolute;
-    top: 6%;
-    left: 48.5%;
-    height: 60px;
-    width: 60px;
-}
-/* logo的文字 */
-.page2-logo-text {
-    position: absolute;
-    top: 15%;
-    left: 48%;
-    color: #782110;
-    font: 12px "myFont";
-}
 /* 东坡肉图片 */
 .page2-img-dpr {
     position: absolute;
@@ -94,22 +78,4 @@
     left: 13%;
     color: #782110;
     font: 20px/30px "myFont";
-}
-
-/* 下一页箭头 */
-.next-img {
-    position: absolute;
-    left: 49%;
-    bottom: 4%;
-    height: 20px;
-    width: 30px;
-}
-
-/* 下一页文字 */
-.next-text {
-    position: absolute;
-    left: 45%;
-    bottom: 7%;
-    color: #782110;
-    font: 14px "myFont";
 }

@@ -1,3 +1,37 @@
 .page3 {
-    background: pink;
+    background: url("../img/page2/bg.png") no-repeat;
+}
+/* 背景图片 */
+.page3-img-bg {
+    position: absolute;
+    width: 240px;
+    height: 380px;
+    right: 1%;
+    top: 8%;
+}
+/* 选择盒子 */
+.page3-select-box {
+    position: absolute;
+    padding: 0 20px;
+    width: 375px;
+    height: 100px;
+    left: 0;
+    bottom: 8%;
+}
+.page3-select-img {
+    height: 100px;
+    width: 100px;
+    margin-right: 10px;
+}
+/* 文字盒子 */
+.page3-text-box {
+    display: none;
+    position: relative;
+    top: 20%;
+    left: 16%;
+    width: 375px;
+}
+.page3-text-box p {
+    font: 18px "myFont";
+    color: #782110;
 }

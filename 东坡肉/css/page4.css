@@ -1,3 +1,35 @@
 .page4 {
-    background: skyblue;
+    background: url("../img/page4/bg.png") no-repeat;
+    background-size: cover;
+}
+/* page4中的文字 */
+.page4-text {
+    font-family: "myFont";
+    color: #782110;
+}
+/* 标题内容 */
+.page4-text-title {
+    position: absolute;
+    top: 10%;
+    width: 375px;
+    text-align: center;
+    font-size: 24px;
+}
+/* 文章内容 */
+.page4-text-box {
+    position: absolute;
+    top: 20%;
+    padding: 0 20px;
+    width: 375px;
+    height: 200px;
+    font-size: 18px;
+
+}
+/* 作者 */
+.page4-text-author {
+    position: absolute;
+    right: 10%;
+    top: 45%;
+    font-size: 18px;
+    font-weight: bold;
 }

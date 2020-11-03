@@ -89,3 +89,37 @@ loading页面动画
         }
     }
 })();
+
+
+let selStatus = 1
+let textStatus = 1
+let doms = document.getElementsByClassName("page3-select-img")
+let text_box = document.getElementsByClassName("page3-text-box")
+function selChange(index){
+    switch(index){
+        case 1:
+            text_box[textStatus-1].style.display = "none"
+            text_box[index-1].style.display = "block"
+            doms[selStatus-1].style.boxShadow = "none"
+            doms[index-1].style.boxShadow = "0 0 5px yellow"
+            selStatus = 1
+            textStatus = 1
+            break
+        case 2:
+            text_box[textStatus-1].style.display = "none"
+            text_box[index-1].style.display = "block"
+            doms[selStatus-1].style.boxShadow = "none"
+            doms[index-1].style.boxShadow = "0 0 5px yellow"
+            selStatus = 1
+            textStatus = 2
+            break
+        case 3:
+            text_box[textStatus-1].style.display = "none"
+            text_box[index-1].style.display = "block"
+            doms[selStatus-1].style.boxShadow = "none"
+            doms[index-1].style.boxShadow = "0 0 5px yellow"
+            selStatus = 1
+            textStatus = 3
+            break
+    }
+}

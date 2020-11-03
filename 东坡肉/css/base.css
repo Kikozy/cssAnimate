@@ -20,6 +20,39 @@
     width: 375px;
     height: 667px;
 }
+/* logo */
+.page-img-logo {
+    position: absolute;
+    top: 6%;
+    left: 45.5%;
+    height: 60px;
+    width: 60px;
+}
+/* logo的文字 */
+.page-logo-text {
+    position: absolute;
+    top: 15%;
+    left: 45%;
+    color: #782110;
+    font: 12px "myFont";
+}
+/* 下一页箭头 */
+.next-img {
+    position: absolute;
+    left: 49%;
+    bottom: 4%;
+    height: 20px;
+    width: 30px;
+}
+
+/* 下一页文字 */
+.next-text {
+    position: absolute;
+    left: 45%;
+    bottom: 7%;
+    color: #782110;
+    font: 14px "myFont";
+}
 @font-face{
     font-family: "myFont";
     src: url("../font/《一碗东坡肉》字体.otf");
