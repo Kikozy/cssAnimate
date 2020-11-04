@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS实现拖拽效果</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        /* 拖拽区域 */
+        .darg-area {
+            height: 500px;
+            width: 800px;
+            overflow: hidden;
+        }
+        .darg-save-area {
+            position: absolute;
+            top: 300px;
+            overflow: hidden;
+        }
+        .darg-save-box {
+            height: 150px;
+            width: 150px;
+            float: left;
+            margin-right: 20px;
+        }
+        .darg-save-box:nth-of-type(1){
+            background: pink;
+        }
+        .darg-save-box:nth-of-type(2){
+            background: rgb(157, 208, 238);
+        }
+        .darg-save-box:nth-of-type(3){
+            background: rgba(97, 97, 97, 0.705);
+        }
+        .darg-part {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            background: red;
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="darg-area">
+        <!-- 存放区域 -->
+        <div class="darg-save-area">
+            <!-- 存放盒子 -->
+            <div class="darg-save-box">干垃圾</div>
+            <div class="darg-save-box">湿垃圾</div>
+            <div class="darg-save-box">不可回收垃圾</div>
+        </div>
+        <!-- 拖拽物件 -->
+        <div class="darg-part" onmousedown="moveStart()" onmouseup="moveEnd()" onmousedown="moveIng()" ></div>
+    </div>
+    <script>
+        function moveStart(){
+            //移动开始
+            console.log("移动开始")
+        }
+        function moveEnd(){
+            //移动结束
+            console.log("移动结束")
+        }
+        function moveIng(e){
+            //移动中
+            console.log("移动中")
+            console.log(e)
+        }
+    </script>
+</body>
+</html>

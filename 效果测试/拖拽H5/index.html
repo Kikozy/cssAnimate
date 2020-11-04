@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拖拽</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .drag-part {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            height: 30px;
+            width: 30px;
+            background: pink;
+            border-radius: 50%;
+        }
+        .move-box {
+            height: 80vh;
+            width: 80vw;
+            position: relative;
+            border: 3px dashed black;
+        }
+    </style>
+</head>
+<body>
+    <!-- 可以拖拽的盒子 -->
+    <div class="move-box">
+        <div class="drag-part"></div>
+    </div>
+    <script>
+
+
+        // partStatus = {
+        //     startX:,
+        //     startY:,
+        //     endX:
+        //     endY:
+        //     box_left: document.querySelector(".move-box").getBoundingClientRect().left
+        //     box_top: document.querySelector(".move-box").getBoundingClientRect().left+paseInt(document.querySelector(".move-box").getBoundingClientRect().width)
+        //     box_right:
+        //     box_bottom: 
+        // }
+        // saveBox = [
+        //     {x:,y:},
+        //     {x:,y:},
+        //     {x:,y:}
+        // ]
+        console.log()
+        let part = document.querySelector(".drag-part")
+        
+        part.addEventListener("touchstart",touchStart)
+        part.addEventListener("touchend",touchEnd)
+        part.addEventListener("touchmove",touchMove)
+        function touchStart(e){
+            console.log("被点击了")
+            console.log(e)
+        }
+        function touchEnd(e){
+
+            console.log("点击结束了")
+        }
+        function touchMove(e){
+            e.preventDefault()
+            console.log("移动开始了")
+            part.style.left = (e.touches[0].pageX-15)+"px"
+            part.style.top = (e.touches[0].pageY-15)+"px"
+            //判断是否进入1 2 3号盒子
+            //判断是否超出了移动范围
+            // if()
+            
+        }
+    </script>
+</body>
+</html>
