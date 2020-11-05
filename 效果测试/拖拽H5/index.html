@@ -18,12 +18,32 @@
             width: 30px;
             background: pink;
             border-radius: 50%;
+            overflow: hidden;
         }
         .move-box {
             height: 80vh;
             width: 80vw;
             position: relative;
             border: 3px dashed black;
+            overflow: hidden;
+        }
+        .save-item {
+            float: left;
+            height: 50px;
+            width: 50px;
+        }
+        .save-item:nth-of-type(1){
+            background: pink;
+        }
+        .save-item:nth-of-type(2){
+            background: skyblue;
+        }
+        .save-item:nth-of-type(3){
+            background: orange;
+        }
+        .save-box {
+            position: absolute;
+            top: 300px;
         }
     </style>
 </head>
@@ -31,29 +51,21 @@
     <!-- 可以拖拽的盒子 -->
     <div class="move-box">
         <div class="drag-part"></div>
+        <div class="save-box">
+            <div class="save-item">1号</div>
+            <div class="save-item">2号</div>
+            <div class="save-item">3号</div>
+        </div>
     </div>
+
     <script>
-
-
-        // partStatus = {
-        //     startX:,
-        //     startY:,
-        //     endX:
-        //     endY:
-        //     box_left: document.querySelector(".move-box").getBoundingClientRect().left
-        //     box_top: document.querySelector(".move-box").getBoundingClientRect().left+paseInt(document.querySelector(".move-box").getBoundingClientRect().width)
-        //     box_right:
-        //     box_bottom: 
-        // }
-        // saveBox = [
-        //     {x:,y:},
-        //     {x:,y:},
-        //     {x:,y:}
-        // ]
-        console.log()
+        let partStatus = {
+            //存放状态 1 2 3 号盒子 0为没有存放
+            saveStatus: 0,
+            nowX: 0,
+            nowY:0
+        }
         let part = document.querySelector(".drag-part")
-        
-        part.addEventListener("touchstart",touchStart)
         part.addEventListener("touchend",touchEnd)
         part.addEventListener("touchmove",touchMove)
         function touchStart(e){
@@ -61,18 +73,23 @@
             console.log(e)
         }
         function touchEnd(e){
-
-            console.log("点击结束了")
+            console.log(e)
+            if(partStatus.nowX>0&partStatus.nowX<30&&partStatus.nowY>300&&partStatus.nowY<330){
+                console.log("第一个箱子？")
+            }
+            // if(partStatus.saveStatus == 0){
+            //     part.style.top = 0+"px"
+            //     part.style.left = 0+"px"
+            // }
         }
         function touchMove(e){
             e.preventDefault()
             console.log("移动开始了")
             part.style.left = (e.touches[0].pageX-15)+"px"
             part.style.top = (e.touches[0].pageY-15)+"px"
-            //判断是否进入1 2 3号盒子
-            //判断是否超出了移动范围
-            // if()
-            
+            partStatus.nowX = (e.touches[0].pageX)
+            partStatus.nowY = (e.touches[0].pageY)
+            console.log(e.touches[0].pageX)
         }
     </script>
 </body>
